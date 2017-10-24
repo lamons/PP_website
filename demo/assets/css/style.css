@@ -1,0 +1,50 @@
+body{
+	background-color: #d9d9d9;
+}
+
+# @media screen and (-webkit-min-device-pixel-ratio:0)
+{
+#safari { background-color:#d9d9d9 }
+}
+
+.vert-wrap{
+	float: left;
+}
+
+.menu-lv2{
+	display: none;
+}
+
+.menu-lv1 .content{
+	width: 10vw;
+}
+
+.menu-lv2 .content{
+	width: 15vw;
+}
+
+a{
+	text-decoration: none;
+}
+
+.publication-toggle, .publication .content{
+	color: red;
+}
+
+.music-toggle, .music .content{
+	color: blue;
+}
+
+.about-toggle, .about .content{
+	color: green;
+}
+
+.slogo{
+	width: 2em;
+}
+
+.switcher{
+	position: absolute;
+	z-index: 10000;
+	right: 5vw;
+}
