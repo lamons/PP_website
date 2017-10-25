@@ -1,5 +1,8 @@
 body{
 	background-color: #d9d9d9;
+	height: 100vh;
+	overflow-y: hidden;
+	margin: 0;
 }
 
 # @media screen and (-webkit-min-device-pixel-ratio:0)
@@ -9,10 +12,17 @@ body{
 
 .vert-wrap{
 	float: left;
+	position: relative;
+}
+
+.menu-lv1{
+	margin-top: 1vh;
+	margin-left: 1vw;
 }
 
 .menu-lv2{
 	display: none;
+	margin-top: 1vh;
 }
 
 .menu-lv1 .content{
@@ -27,20 +37,32 @@ a{
 	text-decoration: none;
 }
 
-.publication-toggle, .publication .content{
+.publication-toggle, .publication .content, .publication .content a{
 	color: red;
 }
 
-.music-toggle, .music .content{
+.music-toggle, .music .content, .music .content a{
 	color: blue;
 }
 
-.about-toggle, .about .content{
+.about-toggle, .about .content, .about .content a{
 	color: green;
 }
 
-.slogo{
-	width: 2em;
+.lv3{
+	display:none;
+	box-sizing: border-box;
+}
+
+.entry{
+	width: 45vw;
+	height: 100vh;
+	overflow-y: scroll;
+	box-sizing: border-box;
+}
+
+.entry a{
+	color: red;
 }
 
 .switcher{
