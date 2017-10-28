@@ -87,20 +87,21 @@
 			<tr><td><a href="index_en.html">en</a>・<a href="index_zh.html">汉</a></td></tr>
 		</table>
 	</div>
-	<div style="width:800px; margin:auto; position:relative;">
-		<canvas id="cv" style="border: 1px solid;" width="750" height="400">
-			It seems you are using an outdated browser that does not support canvas :-(
+
+	<div class="logo-container">
+		<canvas id="logo3d">
+			<img src="imgs/PP_logo.png" width="100%">
 		</canvas>
 		<script type="text/javascript">
-			var viewer = new JSC3D.Viewer(document.getElementById('cv'));
+			var viewer = new JSC3D.Viewer(document.getElementById('3dlogo'));
 			viewer.setParameter('SceneUrl',         'logo.obj');
-			viewer.setParameter('ModelColor',       '#CAA618');
-			viewer.setParameter('BackgroundColor1', '#E5D7BA');
-			viewer.setParameter('BackgroundColor2', '#383840');
+			viewer.setParameter('ModelColor',       '#000000');
+			viewer.setParameter('BackgroundColor',  'off');
 			viewer.setParameter('RenderMode',       'flat');
 			viewer.init();
 			viewer.update();
 		</script>
 	</div>
+
 	</body>
 </html>
