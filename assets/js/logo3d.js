@@ -1,0 +1,10 @@
+var viewer = new JSC3D.Viewer(document.getElementById('logo3d'));
+viewer.setParameter('SceneUrl',         'https://pressed.press/logo.obj');
+viewer.setParameter('ModelColor',       '#000000');
+viewer.setParameter('Background',		'off');
+viewer.setParameter('RenderMode',       'smooth');
+viewer.setParameter('InitRotationX',    Math.random()*180);
+viewer.setParameter('InitRotationY',    Math.random()*180);
+viewer.setParameter('InitRotationZ',    Math.random()*180);
+viewer.init();
+viewer.update();

@@ -70,3 +70,13 @@ a{
 	z-index: 10000;
 	right: 5vw;
 }
+
+.logo3d-container{
+	margin:auto;
+	position:relative;
+}
+
+#logo3d{
+	border: 0;
+	background: none;
+}
