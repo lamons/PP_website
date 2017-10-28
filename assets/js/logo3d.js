@@ -1,5 +1,5 @@
 var viewer = new JSC3D.Viewer(document.getElementById('logo3d'));
-viewer.setParameter('SceneUrl',         'https://pressed.press/logo.obj');
+viewer.setParameter('SceneUrl',         'logo.obj');
 viewer.setParameter('ModelColor',       '#000000');
 viewer.setParameter('Background',		'off');
 viewer.setParameter('RenderMode',       'smooth');
