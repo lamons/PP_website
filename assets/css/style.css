@@ -1,13 +1,15 @@
 body{
-	background-color: #d9d9d9;
+	background-color: rgb(168,170,170);
 	height: 100vh;
 	overflow-y: hidden;
 	margin: 0;
+	font-family: "Courier New", "Source Han Serif SC";
+	font-weight: lighter;
 }
 
 # @media screen and (-webkit-min-device-pixel-ratio:0)
 {
-#safari { background-color:#d9d9d9 }
+#safari { background-color:rgb(168,170,170) }
 }
 
 .vert-wrap{
@@ -38,15 +40,15 @@ a{
 }
 
 .publication-toggle, .publication .content, .publication .content a{
-	color: red;
+	color: rgb(228,23,34);
 }
 
 .music-toggle, .music .content, .music .content a{
-	color: blue;
+	color: rgb(10,77,181);
 }
 
 .about-toggle, .about .content, .about .content a{
-	color: green;
+	color: rgb(0,141,69);
 }
 
 .lv3{
@@ -72,8 +74,10 @@ a{
 }
 
 .logo3d-container{
-	margin:auto;
-	position:relative;
+	margin: auto;
+	position: relative;
+	float: left;
+	/* z-index: 1; */
 }
 
 #logo3d{
