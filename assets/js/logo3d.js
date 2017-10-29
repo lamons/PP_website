@@ -1,6 +1,6 @@
 var viewer = new JSC3D.Viewer(document.getElementById('logo3d'));
 var randomColor = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
-viewer.setParameter('SceneUrl',         'https://pressed.press/logo.obj');
+viewer.setParameter('SceneUrl',         'logo.obj');
 viewer.setParameter('ModelColor',       randomColor);
 viewer.setParameter('Background',		'off');
 viewer.setParameter('RenderMode',       'smooth');

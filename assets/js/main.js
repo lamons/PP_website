@@ -7,6 +7,7 @@ $(document).ready(function(){
 		$(".publication").show("slide", { direction: "left" }, 300);
 		$(".music-toggle").css("text-decoration", "none");
 		$(".about-toggle").css("text-decoration", "none");
+		$(".publication-index").css("text-decoration", "none");
 		$(this).css("text-decoration", "line-through");
 	});
 });
@@ -20,6 +21,7 @@ $(document).ready(function(){
 		$(".music").show("slide", { direction: "left" }, 300);
 		$(".about-toggle").css("text-decoration", "none");
 		$(".publication-toggle").css("text-decoration", "none");
+		$(".publication-index").css("text-decoration", "none");
 		$(this).css("text-decoration", "line-through");
 	});
 });
@@ -33,6 +35,7 @@ $(document).ready(function(){
 		$(".about").show("slide", { direction: "left" }, 300);
 		$(".publication-toggle").css("text-decoration", "none");
 		$(".music-toggle").css("text-decoration", "none");
+		$(".publication-index").css("text-decoration", "none");
 		$(this).css("text-decoration", "line-through");
 	});
 });
