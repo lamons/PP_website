@@ -24,19 +24,19 @@
 	<body>
 	<div class="vert-wrap menu-lv1">
 		<div class="content">
-			<table>
-				<tr><td>扁社</td></tr>
-				<tr><td><a href="javascript:void(0);" class="publication-toggle">出版物</a></td></tr>
-				<tr><td><a href="javascript:void(0);" class="music-toggle">音乐</a></td></tr>
-				<tr><td><a href="javascript:void(0);" class="about-toggle">关于</a></td></tr>
-			</table>
+			<ul>
+				<li>扁社</li>
+				<li class="pub-button"><a href="javascript:void(0);" class="publication-toggle">出版物</a></li>
+				<li class="music-button"><a href="javascript:void(0);" class="music-toggle">音乐</a></li>
+				<li class="about-button"><a href="javascript:void(0);" class="about-toggle">关于</a></li>
+			</ul>
 		</div>
 	</div>
 <!-- LEVEL TWO MENUS -->
 	<div class="vert-wrap menu-lv2 publication">
 		<div class="content">
-			<table>
-				<tr><td>　</td></tr>
+			<table class="pub-content">
+				<!-- <tr><td>　</td></tr> -->
 				<tr><td><a href="javascript:void(0);" class="joyride publication-index">alvalee《Joyride》</a></td></tr>
 				<tr><td><a href="javascript:void(0);" class="daiding publication index">靳彤《待定》</a></td></tr>
 			</table>
@@ -44,9 +44,7 @@
 	</div>
 	<div class="vert-wrap menu-lv2 music">
 		<div class="content">
-			<table>
-				<tr><td>　</td></tr>
-				<tr><td>　</td></tr>
+			<table class="music-content">
 				<tr><td>alvalee《Joyride》---</td></tr>
 				<tr><td>靳彤《待定》---</td></tr>
 			</table>
@@ -54,11 +52,8 @@
 	</div>
 	<div class="vert-wrap menu-lv2 about">
 		<div class="content">
-			<table>
-				<tr><td>　</td></tr>
-				<tr><td>　</td></tr>
-				<tr><td>　</td></tr>
-				<tr><td>扁社由<a href="mailto:cz@pressed.press" style="color:red;">周琛</a>和<a href="mailto:ts@pressed.press" style="color:blue;">甜食</a>两位成员组成，成立于2017年。从事摄影、音乐、独立出版等领域的实践。试图从日常生活直视当代文化，重建无关紧要的历史。</td></tr>
+			<table class="about-content">
+				<tr><td>扁社由<a href="mailto:cz@pressed.press" style="color:red;">周琛</a>和<a href="mailto:ts@pressed.press" style="color:blue;">甜食</a>组成，成立于2017年。从事摄影、音乐、独立出版等领域的实践。试图从日常生活直视当代文化，重建无关紧要的历史。</td></tr>
 				<tr><td>　</td></tr>
 				<tr><td><a href="mailto:press@pressed.press">press@pressed.press</a></td></tr>
 			</table>
@@ -95,5 +90,6 @@
 		</canvas>
 	</div>
 	<script type="text/javascript" src="assets/js/logo3d.js"></script>
+	<script type="text/javascript" src="assets/js/loaded.js"></script>
 	</body>
 </html>

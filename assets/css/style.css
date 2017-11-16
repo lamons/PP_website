@@ -14,6 +14,20 @@ body{
 #safari { background-color:rgb(168,170,170) }
 }
 
+ul{
+	margin: 0;
+    padding: 0;
+	list-style-type: none;
+}
+
+ul li{
+	height: 24px;
+}
+
+table{
+	border-spacing: 0;
+}
+
 .vert-wrap{
 	float: left;
 	position: relative;
@@ -30,10 +44,10 @@ body{
 }
 
 .menu-lv1 .content{
-	width: 10vw;
+	width: 8vw;
 }
 
-.menu-lv2 .content{
+.menu-lv2 .content, .menu-lv2 .content .about-content{
 	width: 17vw;
 }
 
@@ -51,6 +65,10 @@ a{
 
 .about-toggle, .about .content, .about .content a{
 	color: rgb(0,141,69);
+}
+
+.pub-content, .music-content, .about-content{
+	position:fixed;
 }
 
 .lv3{
