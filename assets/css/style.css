@@ -4,7 +4,7 @@ body{
 	overflow-y: hidden;
 	overflow-x: hidden;
 	margin: 0;
-	font-family: "Courier New", "Source Han Serif SC";
+	font-family: "Courier New", "SHSCN-ExtraLight";
 	font-weight: lighter;
 	font-size: .4cm;
 }
@@ -26,6 +26,7 @@ ul li{
 
 table{
 	border-spacing: 0;
+	display: block;
 }
 
 .vert-wrap{
@@ -68,7 +69,7 @@ a{
 }
 
 .pub-content, .music-content, .about-content{
-	position:fixed;
+	position: fixed;
 }
 
 .lv3{

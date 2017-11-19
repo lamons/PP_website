@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'SHSCN-ExtraLight';
+  src: url('../../fonts/SHSCN-ExtraLight.eot');
+  src:
+    url('../../fonts/SHSCN-ExtraLight.eot?#font-spider') format('embedded-opentype'),
+    url('../../fonts/SHSCN-ExtraLight.woff2') format('woff2'),
+    url('../../fonts/SHSCN-ExtraLight.woff') format('woff'),
+    url('../../fonts/SHSCN-ExtraLight.ttf') format('truetype'),
+    url('../../fonts/SHSCN-ExtraLight.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
