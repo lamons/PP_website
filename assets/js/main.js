@@ -43,12 +43,42 @@ $(document).ready(function(){
 	});
 });
 
-$(document).ready(function(){
-	$(".joyride").click(function(){
-		$(".lv3").hide();
-		$(".joyride-entry").show("slide", { direction: "left" }, 300);
-		$(".publication-index").css("text-decoration", "none");
-		$(this).css("text-decoration", "line-through");
+$(".joyride").click(function(){
+	console.log("sss");
+	$.ajax({
+		url: 'index_zh.php',
+		data: {"article": alvalee},
+		type: 'GET',
+		success: function(data)
+		{
+			$(".entry").html(data);
+		}
 	});
+
+	$(".lv3").hide();
+	$(".joyride-entry").show("slide", { direction: "left" }, 300);
+	$(".publication-index").css("text-decoration", "none");
+	$(this).css("text-decoration", "line-through");
 });
+
+
+//$(document).ready(function(){
+//	$(".joyride").click(function(){
+//		console.log("sss");
+//		$.ajax({
+//			url: 'index_zh.php',
+//			data: {"article": alvalee},
+//			type: 'GET',
+//			success: function(data)
+//			{
+//				$(".entry").html(data);
+//			}
+//		});
+//
+//		//$(".lv3").hide();
+//		//$(".joyride-entry").show("slide", { direction: "left" }, 300);
+//		//$(".publication-index").css("text-decoration", "none");
+//		//$(this).css("text-decoration", "line-through");
+//	});
+//});
 
