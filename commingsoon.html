@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+	<meta charset="utf-8"/>
+	<title>Pressed Press</title>
+	<style type="text/css">
+		body, html {
+			margin:0;
+			padding:0;
+			height:100%;
+		}
+		.Center-Container {
+			overflow: hide;
+			display:flex;
+			justify-content: center;
+			flex-direction:column;
+		}
+		span {
+			vertical-align: middle;
+			text-align: center;
+			font-family: Courier New, monospace;
+			font-size: xx-large;
+		}
+		.acenter {
+			margin: 0 auto;
+			clear: both;
+		}
+	</style>
+	<link rel="icon" href="favicons/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+	<link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#000000">
+	<meta name="theme-color" content="#ffffff">
+	<script src="http://www.x3dom.org/release/x3dom.js"></script>
+    <link rel="stylesheet" href="http://www.x3dom.org/release/x3dom.css">
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery-ui.min.js"></script>
+	<script type>
+		$(document).ready(function(){
+			$("#3Dtransform").attr("rotation", Math.random()*180+","+Math.random()*180+","+Math.random()*180+","+Math.random()*180)
+		});
+	</script>
+
+	<!-- <link rel="stylesheet" type="text/css" href="//www.siteground.com/css/systempages.css" media="screen, handheld" /> -->
+</head>
+<body>
+	<div class="Center-Container">
+		<!-- <img src="imgs/PP_logo.png" class="acenter" alt="Pressed Press Logo" />     -->
+		<div class="acenter">
+			<x3d style="width: 500px; height: 500px; margin-left: auto; margin-right: auto; margin-top: 20%; clear:both;">
+				<scene>
+					<Transform id='3Dtransform'  bboxCenter='0,0,0' bboxSize='-1,-1,-1' center='0,0,0' children='X3DChildNode' metadata='X3DMetadataObject' render='true' rotation='0.5,0.5,0.5,0.5' scale='50,50,50' scaleOrientation='0,0,1,0' translation='0,0,0' ><inline url="logo.x3d"> </inline></Transform>
+				</scene>
+			</x3d>
+		</div>
+		<div class='acenter'><span>comming soon</span></div>
+	</div>
+
+
+
+</body>
+</html>
