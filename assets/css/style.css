@@ -1,17 +1,25 @@
 body{
-	background-color: rgb(168,170,170);
+	font-size:17px;
+	line-height:26px;
+	background-color: #a8aaaa;
 	height: 100vh;
 	overflow-y: hidden;
 	overflow-x: hidden;
 	margin: 0;
-	font-family: "Courier New", "SHSCN-ExtraLight";
-	font-weight: lighter;
-	font-size: .4cm;
+	overflow: -moz-scrollbars-none;
+	-ms-overflow-style: none;
 }
 
-# @media screen and (-webkit-min-device-pixel-ratio:0)
-{
-#safari { background-color:rgb(168,170,170) }
+-webkit-scrollbar{
+	width: 0 !important;
+}
+
+a{
+	text-decoration: none;
+}
+
+a:hover{
+	text-decoration: line-through;
 }
 
 ul{
@@ -20,89 +28,45 @@ ul{
 	list-style-type: none;
 }
 
-ul li{
-	height: 24px;
+div{
+	float:left;
 }
 
-table{
-	border-spacing: 0;
-	display: block;
+.lv1{
+	margin-left: 1em;
 }
 
-.vert-wrap{
-	float: left;
-	position: relative;
+.lv1, .lv2{
+	margin-right: 1em;
+	margin-top: 1em
 }
 
-.menu-lv1{
-	margin-top: 1vh;
-	margin-left: 1vw;
-}
-
-.menu-lv2{
-	display: none;
-	margin-top: 1vh;
-}
-
-.menu-lv1 .content{
-	width: 8vw;
-}
-
-.menu-lv2 .content, .menu-lv2 .content .about-content{
-	width: 17vw;
-}
-
-a{
-	text-decoration: none;
-}
-
-.publication-toggle, .publication .content, .publication .content a{
-	color: rgb(228,23,34);
-}
-
-.music-toggle, .music .content, .music .content a{
-	color: rgb(10,77,181);
-}
-
-.about-toggle, .about .content, .about .content a{
-	color: rgb(0,141,69);
-}
-
-.pub-content, .music-content, .about-content{
-	position: fixed;
+.lv2, .lv3{
+	display:none;
 }
 
 .lv3{
-	display:none;
-	box-sizing: border-box;
+	width: 50%;
+	margin-top: 1em
 }
 
-.entry{
-	width: 45vw;
+.lv3 .content{
 	height: 100vh;
-	overflow-y: scroll;
+	overflow-y: auto;
 	overflow-x: hidden;
 	box-sizing: border-box;
+	padding-right: .5em;
 }
 
-.entry a{
-	color: red;
+.logobox{
+	z-index: -100;
 }
 
-.switcher{
-	position: absolute;
-	z-index: 10000;
-	right: 5vw;
-}
-
-.logo3d-container{
-	margin: auto;
-	position: relative;
-	float: left;
-	/* z-index: 1; */
-}
-
-#logo3d{
-	border: 0;
-	background: none;
-}
+/* .logobox x3d{ */
+	/* width: 500px; */
+	/* height: 500px; */
+	/* margin-left: auto; */
+	/* margin-right: auto; */
+	/* margin-top: 20%; */
+	/* clear:both; */
+/* } */
