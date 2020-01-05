@@ -50,6 +50,10 @@ div{
 	/* pointer-events: none; */
 }
 
+.lv2 td a{
+	color: #e41722;
+}
+
 .lv3{
 	width: 50%;
 	margin-top: 1em
