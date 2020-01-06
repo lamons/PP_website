@@ -50,7 +50,7 @@ div{
 	/* pointer-events: none; */
 }
 
-.lv2 td a{
+.publication td a, .pub-entry a{
 	color: #e41722;
 }
 
@@ -67,7 +67,7 @@ div{
 	padding-right: .5em;
 }
 
-.about content{
+.about .content{
 	height: 100vh;
 	overflow-x: hidden;
 	box-sizing: border-box;
@@ -77,6 +77,16 @@ div{
 
 .about{
 	width: 30%;
+}
+
+.about a{
+	color: #008d45;
+}
+
+.purchase{
+	border:1px;
+	border-style:solid;
+	border-color:#000000;
 }
 
 .logobox{
