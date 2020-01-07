@@ -39,18 +39,10 @@ $(document).ready(function(){
 		$(".entry").show();
 		$("#entry-cx1").show();
 	}
-});
-
-$(document).ready(function(){
-	var pagehash = getAnchor();
-	if (pagehash == 'about') {
+	else if (pagehash == 'about') {
 		$(".about").show();
 	}
-});
-
-$(document).ready(function(){
-	var pagehash = getAnchor();
-	if (pagehash == 'publication') {
+	else if (pagehash == 'publication') {
 		$(".publication").show();
 	}
 });
