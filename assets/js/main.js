@@ -28,16 +28,22 @@ $(document).ready(function(){
 	});
 	$("#cx1").click(function(){
 		$(".entry").show();
-		$("#entry-cx1").show();
+		$("#landscapesWithColor").show();
 	});
 });
 
 $(document).ready(function(){
 	var pagehash = getAnchor();
 	if (pagehash == 'entry-cx1') {
+		window.location.href = "#landscapesWithColor";
 		$(".publication").show();
 		$(".entry").show();
-		$("#entry-cx1").show();
+		$("#landscapesWithColor").show();
+	}
+	else if (pagehash == 'landscapesWithColor') {
+		$(".publication").show();
+		$(".entry").show();
+		$("#landscapesWithColor").show();
 	}
 	else if (pagehash == 'about') {
 		$(".about").show();
