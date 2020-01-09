@@ -32,6 +32,15 @@ div{
 	float:left;
 }
 
+#lang-switch{
+	float: right;
+	position:fixed;
+	z-index: 3;
+	right: 1em;
+	left: auto;
+	top: 1em
+}
+
 .lv1{
 	margin-left: 1em;
 }
