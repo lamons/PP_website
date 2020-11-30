@@ -8,34 +8,28 @@
             type="button"
             class="toggle book"
             v-on:click="showABookCatalog(bookCatalogLoaded)"
-          >
-            Books
-          </button>
+          >Books</button>
           <button
             type="button"
             class="toggle about"
             v-on:click="showAboutCatalog(aboutLoaded)"
-          >
-            About
-          </button>
+          >About</button>
         </div>
       </div>
       <div class="home_wrapper_left_col2" v-if="bookCatalogLoaded">
         <div class="row1">〇</div>
         <div class="catalog_wrapper book">
-          <button
-            type="button"
-            class="toggle book"
-            v-on:click="showBook1(book1Loaded)"
-          >
-            <span>CAI Xiao, <i>Landscapes With Color</i></span>
+          <button type="button" class="toggle book" v-on:click="showBook1(book1Loaded)">
+            <span>
+              CAI Xiao,
+              <i>Landscapes With Color</i>
+            </span>
           </button>
-          <button
-            type="button"
-            class="toggle book"
-            v-on:click="showBook2(book2Loaded)"
-          >
-            <span>CAI Xiao, <i>Invisible Storm</i></span>
+          <button type="button" class="toggle book" v-on:click="showBook2(book2Loaded)">
+            <span>
+              CAI Xiao,
+              <i>Invisible Storm</i>
+            </span>
           </button>
         </div>
       </div>
@@ -50,9 +44,7 @@
       </div>
     </div>
     <div class="home_wrapper_right">
-      <router-link class="toggle english" to="/">
-        中文
-      </router-link>
+      <router-link class="toggle english" to="/">中文</router-link>
     </div>
   </div>
 </template>
@@ -133,7 +125,7 @@ export default {
     }
     &_col3 {
       max-width: 720px;
-      height: 91vh;
+      height: 100vh;
       overflow-y: scroll;
       overflow-x: hidden;
       padding-right: 0.5rem;

@@ -8,35 +8,15 @@
             type="button"
             class="toggle book"
             v-on:click="showABookCatalog(bookCatalogLoaded)"
-          >
-            出版物
-          </button>
-          <button
-            type="button"
-            class="toggle about"
-            v-on:click="showAboutCatalog(aboutLoaded)"
-          >
-            关于
-          </button>
+          >出版物</button>
+          <button type="button" class="toggle about" v-on:click="showAboutCatalog(aboutLoaded)">关于</button>
         </div>
       </div>
       <div class="home_wrapper_left_col2" v-if="bookCatalogLoaded">
         <div class="row1">〇</div>
         <div class="catalog_wrapper book">
-          <button
-            type="button"
-            class="toggle book"
-            v-on:click="showBook1(book1Loaded)"
-          >
-            蔡驍《有颜色的风景》
-          </button>
-          <button
-            type="button"
-            class="toggle book"
-            v-on:click="showBook2(book2Loaded)"
-          >
-            蔡驍《无色的风暴》
-          </button>
+          <button type="button" class="toggle book" v-on:click="showBook1(book1Loaded)">蔡驍《有颜色的风景》</button>
+          <button type="button" class="toggle book" v-on:click="showBook2(book2Loaded)">蔡驍《无色的风暴》</button>
         </div>
       </div>
       <div class="home_wrapper_left_col2 row3Content" v-else-if="aboutLoaded">
@@ -50,9 +30,7 @@
       </div>
     </div>
     <div class="home_wrapper_right">
-      <router-link class="toggle english" to="/en">
-        English
-      </router-link>
+      <router-link class="toggle english" to="/en">English</router-link>
     </div>
   </div>
 </template>
@@ -137,7 +115,7 @@ export default {
     }
     &_col3 {
       max-width: 720px;
-      height: 91vh;
+      height: 100vh;
       overflow-y: scroll;
       overflow-x: hidden;
       padding-right: 0.5rem;
