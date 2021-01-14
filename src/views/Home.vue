@@ -93,11 +93,9 @@ export default {
 <style scoped lang="scss">
 .home_wrapper {
   font-size: 17px;
-
   display: flex;
   justify-content: space-between;
   padding: 2rem;
-
   &_left {
     display: flex;
     flex-wrap: wrap;
@@ -140,6 +138,7 @@ export default {
   }
   .book {
     color: #e41722;
+    flex-direction: row;
   }
   .about {
     color: #008d45;
