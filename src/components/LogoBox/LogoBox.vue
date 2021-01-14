@@ -6,7 +6,7 @@
           <box></box>
         </shape>
       </scene>
-    </x3d> -->
+    </x3d>-->
 
     <x3d style="width: 100%; height: 100%;">
       <scene>
@@ -89,5 +89,7 @@ export default {
   z-index: 1;
   position: absolute;
   top: 0;
+  height: 100vh;
+  width: 100%;
 }
 </style>

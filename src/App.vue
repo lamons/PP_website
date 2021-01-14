@@ -9,13 +9,13 @@
           </shape>
         </scene>
       </x3d>
-    </div> -->
+    </div>-->
     <LogoBox />
   </div>
 </template>
 
 <script>
-import LogoBox from "@/components/LogoBox.vue";
+import LogoBox from "@/components/LogoBox/LogoBox.vue";
 export default {
   name: "App",
   components: { LogoBox }

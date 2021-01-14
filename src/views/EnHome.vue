@@ -113,19 +113,22 @@ export default {
     flex-wrap: wrap;
     text-align: left;
     z-index: 2;
+    max-height: calc(100vh - 4rem);
     .row1 {
       margin-bottom: 0.4rem;
     }
     &_col1 {
       margin-right: 1.5rem;
+      height: min-content;
     }
     &_col2 {
       margin-right: 1.5rem;
       max-width: 380px;
+      height: min-content;
     }
     &_col3 {
       max-width: 720px;
-      height: 100vh;
+      height: 90vh;
       overflow-y: scroll;
       overflow-x: hidden;
       padding-right: 0.5rem;
