@@ -19,7 +19,7 @@
       </div>
       <div class="home_wrapper_left_col2" v-if="bookCatalogLoaded">
         <div class="row1">〇</div>
-        <div class="catalog_wrapper book">
+        <div class="catalog_wrapper toggle">
           <button type="button" class="toggle book" v-on:click="showBook1(book1Loaded)">
             <span>
               CAI Xiao,
@@ -297,6 +297,8 @@ export default {
     &_col1 {
       margin-right: 1.5rem;
       height: min-content;
+      min-width: fit-content;
+
       animation-duration: 2s;
       animation-name: slidein;
     }
@@ -315,6 +317,7 @@ export default {
       margin-right: 1.5rem;
       max-width: 200px;
       height: min-content;
+      min-width: fit-content;
     }
     &_col3 {
       max-width: 720px;
@@ -353,7 +356,7 @@ export default {
 }
 
 .row3Content {
-  margin-top: 3.8rem;
+  margin-top: 4.6rem;
 }
 button {
   border: 0;
