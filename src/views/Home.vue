@@ -293,7 +293,7 @@ export default {
     }
     &_col3 {
       max-width: 720px;
-      height: 81vh;
+      height: 85vh;
       overflow-y: scroll;
       overflow-x: hidden;
       padding-right: 0.5rem;
