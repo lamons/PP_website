@@ -1,5 +1,6 @@
 <template>
-  <div class="home_wrapper">
+  <!-- 电脑端样式 -->
+  <div class="home_wrapper" v-if="screenWidth>500">
     <div class="home_wrapper_left">
       <div class="home_wrapper_left_col1">
         <div class="title row1">Pressed Press</div>
@@ -7,12 +8,12 @@
           <button
             type="button"
             class="toggle book"
-            v-on:click="showABookCatalog(bookCatalogLoaded)"
+            v-on:click="showBookCatalog(bookCatalogLoaded)"
           >Books</button>
           <button
             type="button"
             class="toggle about"
-            v-on:click="showAboutCatalog(aboutLoaded)"
+            v-on:click="showAboutCatalog(aboutContentLoaded)"
           >About</button>
         </div>
       </div>
@@ -33,7 +34,7 @@
           </button>
         </div>
       </div>
-      <div class="home_wrapper_left_col2 row3Content" v-else-if="aboutLoaded">
+      <div class="home_wrapper_left_col2 row3Content" v-else-if="aboutContentLoaded">
         <EnAbout />
       </div>
       <div class="home_wrapper_left_col3" v-if="book1Loaded">
@@ -47,45 +48,140 @@
       <router-link class="toggle english" to="/">中文</router-link>
     </div>
   </div>
+  <!-- 手机端样式 -->
+  <div class="home_wrapper mobile_wrapper" v-else-if="screenWidth<500">
+    <div class="mobile_wrapper_top">
+      <div class="mobile_wrapper_top_left">
+        <div
+          class="title row1"
+          :class="[ fadeout ? 'fadeout' : '' ]"
+          v-if="titleLoaded"
+        >Pressed Press</div>
+        <div class="toggle">
+          <button
+            type="button"
+            class="book backBtn"
+            v-if="bookCatalogBack"
+            v-on:click="showMobileBookCatalog(titleLoaded, aboutLoaded, bookCatalogLoaded,bookCatalogBack)"
+          >←</button>
+          <button
+            type="button"
+            class="toggle book"
+            v-if="bookMenuLoaded"
+            v-on:click="showMobileBookCatalog(titleLoaded, aboutLoaded, bookCatalogLoaded,bookCatalogBack)"
+          >Books</button>
+          <div class="home_wrapper_left_col2" v-if="bookCatalogLoaded">
+            <div class="row1">〇</div>
+            <div class="catalog_wrapper book">
+              <button type="button" class="toggle book" v-on:click="showMobileBook1()">
+                <span>
+                  CAI Xiao,
+                  <i>Landscapes With Color</i>
+                </span>
+              </button>
+              <button type="button" class="toggle book" v-on:click="showMobileBook2()">
+                <span>
+                  CAI Xiao,
+                  <i>Invisible Storm</i>
+                </span>
+              </button>
+            </div>
+          </div>
+          <button
+            type="button"
+            class="about backBtn"
+            v-if="aboutBack"
+            v-on:click="showMobileAboutCatalog(titleLoaded,bookMenuLoaded,aboutLoaded,aboutBack,aboutContentLoaded)"
+          >←</button>
+          <button
+            type="button"
+            class="toggle about"
+            v-on:click="showMobileAboutCatalog(titleLoaded,bookMenuLoaded,aboutLoaded,aboutBack,aboutContentLoaded)"
+            v-if="aboutLoaded"
+          >About</button>
+        </div>
+      </div>
+      <div class="home_wrapper_top_right">
+        <router-link class="toggle english" to="/">中文</router-link>
+      </div>
+    </div>
+    <div class="mobile_wrapper_bottom">
+      <div v-if="aboutContentLoaded">
+        <EnAbout></EnAbout>
+      </div>
+      <div class="home_wrapper_left_col3" v-if="book1Loaded">
+        <EnBook1 />
+      </div>
+      <div class="home_wrapper_left_col3" v-if="book2Loaded">
+        <EnBook2 />
+      </div>
+    </div>
+  </div>
 </template>
+
 <script>
 import EnAbout from "@/components/About/EnAbout.vue";
 import EnBook1 from "@/components/Books/EnBook1.vue";
 import EnBook2 from "@/components/Books/EnBook2.vue";
+
 export default {
   name: "EnHome",
   components: { EnAbout, EnBook1, EnBook2 },
-
+  mounted() {
+    const that = this;
+    window.onresize = () => {
+      return (() => {
+        window.screenWidth = document.body.clientWidth;
+        that.screenWidth = window.screenWidth;
+      })();
+    };
+  },
   data() {
     return {
+      screenWidth: document.body.clientWidth,
+      bookMenuLoaded: true,
+
+      //一级菜单
+      //扁社开关
+      titleLoaded: true,
       //出版物开关
       bookCatalogLoaded: false,
       //关于开关
-      aboutLoaded: false,
+      aboutLoaded: true,
+
+      //二级菜单
+      //出版物目录返回开关
+      bookCatalogBack: false,
       //出版文章1开关
       book1Loaded: false,
       //出版文章2开关
-      book2Loaded: false
+      book2Loaded: false,
+      //关于内容开关
+      aboutContentLoaded: false,
+      //关于返回开关
+      aboutBack: false,
+      //动画开关
+      fadeout: false
     };
   },
   methods: {
-    showABookCatalog(bookCatalogLoaded) {
+    showBookCatalog(bookCatalogLoaded) {
       //关掉其他目录
-      this.aboutLoaded = false;
+      this.aboutContentLoaded = false;
       //关掉其他文章
       this.book1Loaded = false;
       this.book2Loaded = false;
       //打开或关闭当前点击目录
       this.bookCatalogLoaded = !bookCatalogLoaded;
     },
-    showAboutCatalog(aboutLoaded) {
+    showAboutCatalog(aboutContentLoaded) {
       //关掉其他目录
       this.bookCatalogLoaded = false;
       //关掉其他文章
       this.book1Loaded = false;
       this.book2Loaded = false;
-      //打开或关闭当前点击目录
-      this.aboutLoaded = !aboutLoaded;
+      //打开或关闭当前点击目录的内容
+      this.aboutContentLoaded = !aboutContentLoaded;
     },
     showBook1(book1Loaded) {
       //关掉其他文章
@@ -98,6 +194,88 @@ export default {
       this.book1Loaded = false;
       //打开选中文章
       this.book2Loaded = !book2Loaded;
+    },
+    showMobileBookCatalog(
+      titleLoaded,
+      aboutLoaded,
+      bookCatalogLoaded,
+      bookCatalogBack
+    ) {
+      //关掉标题
+      this.fadeout = true;
+      this.titleLoaded = !titleLoaded;
+
+      //关掉关于
+      this.aboutLoaded = !aboutLoaded;
+      //打开或关闭当前点击目录
+      this.bookCatalogLoaded = !bookCatalogLoaded;
+      //打开或关闭当前点击目录返回
+      this.bookCatalogBack = !bookCatalogBack;
+      //关掉其他文章
+      this.book1Loaded = false;
+      this.book2Loaded = false;
+      //关掉关于的内容
+      this.aboutContentLoaded = false;
+    },
+    showMobileBook1() {
+      //关掉其他文章
+      this.book2Loaded = false;
+      //关掉二级菜单
+      this.bookCatalogLoaded = false;
+      //关掉二级菜单返回
+      this.bookCatalogBack = false;
+      //打开标题
+      this.titleLoaded = true;
+      //打开关于
+      this.aboutLoaded = true;
+      //打开选中文章
+      this.book1Loaded = true;
+    },
+    showMobileBook2() {
+      //关掉其他文章
+      this.book1Loaded = false;
+      //关掉二级菜单
+      this.bookCatalogLoaded = false;
+      //关掉二级菜单返回
+      this.bookCatalogBack = false;
+      //打开标题
+      this.titleLoaded = true;
+      //打开关于
+      this.aboutLoaded = true;
+      //打开选中文章
+      this.book2Loaded = true;
+    },
+    showMobileAboutCatalog(
+      titleLoaded,
+      bookMenuLoaded,
+      aboutLoaded,
+      aboutBack,
+      aboutContentLoaded
+    ) {
+      //关掉标题
+      this.fadeout = true;
+      this.titleLoaded = !titleLoaded;
+      //关掉出版物
+      this.bookMenuLoaded = !bookMenuLoaded;
+      //打开或关闭当前目录
+      this.aboutBack = !aboutBack;
+      this.aboutContentLoaded = !aboutContentLoaded;
+    }
+  },
+  watch: {
+    screenWidth(val) {
+      // 为了避免频繁触发resize函数导致页面卡顿，使用定时器
+      if (!this.timer) {
+        // 一旦监听到的screenWidth值改变，就将其重新赋给data里的screenWidth
+        this.screenWidth = val;
+        this.timer = true;
+        let that = this;
+        setTimeout(function() {
+          // 打印screenWidth变化的值
+          console.log(that.screenWidth);
+          that.timer = false;
+        }, 400);
+      }
     }
   }
 };
@@ -110,7 +288,7 @@ export default {
   padding: 2rem;
   &_left {
     display: flex;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     text-align: left;
     z-index: 2;
     max-height: calc(100vh - 4rem);
@@ -120,10 +298,23 @@ export default {
     &_col1 {
       margin-right: 1.5rem;
       height: min-content;
+      animation-duration: 2s;
+      animation-name: slidein;
+    }
+    @keyframes slidein {
+      from {
+        margin-left: 100%;
+        width: 300%;
+      }
+
+      to {
+        margin-left: 0%;
+        width: 100%;
+      }
     }
     &_col2 {
       margin-right: 1.5rem;
-      max-width: 380px;
+      max-width: 200px;
       height: min-content;
     }
     &_col3 {
@@ -136,6 +327,7 @@ export default {
   }
   &_right {
     z-index: 2;
+    min-width: fit-content;
   }
   .title {
     display: flex;
@@ -146,7 +338,8 @@ export default {
     flex-direction: column;
     text-align: left;
     font-size: 17px;
-    margin-bottom: 0.4rem;
+    margin: 0.4rem 0 0.4rem 0;
+    align-items: flex-start;
   }
   .book {
     color: #e41722;
@@ -174,5 +367,39 @@ button {
   &:focus {
     text-decoration: line-through;
   }
+}
+
+.fadeout {
+  animation-duration: 2s;
+  animation-name: fadeout;
+}
+@keyframes fadeout {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 50%;
+  }
+}
+
+//手机端样式
+.mobile_wrapper {
+  flex-direction: column;
+  &_top {
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+  }
+  &_bottom {
+    z-index: 2;
+    text-align: left;
+  }
+}
+// .bookCatalogBack {
+//   font-size: larger;
+//   color: #e41722;
+// }
+.backBtn {
+  font-size: larger;
 }
 </style>
