@@ -43,7 +43,7 @@
     <div class="mobile_wrapper_top">
       <div class="mobile_wrapper_top_left">
         <div class="title row1" :class="[ fadeout ? 'fadeout' : '' ]" v-if="titleLoaded">扁社</div>
-        <div class="toggle">
+        <div class="mobileToggle">
           <div
             type="button"
             class="book backBtn"
@@ -52,15 +52,23 @@
           >←</div>
           <button
             type="button"
-            class="toggle book"
+            class="mobileToggle book"
             v-if="bookMenuLoaded"
             v-on:click="showMobileBookCatalog(titleLoaded, aboutLoaded, bookCatalogLoaded,bookCatalogBack)"
           >出版物</button>
           <div class="home_wrapper_left_col2" v-if="bookCatalogLoaded">
             <div class="row1">〇</div>
             <div class="catalog_wrapper book">
-              <button type="button" class="toggle book" v-on:click="showMobileBook1()">蔡驍《有颜色的风景》</button>
-              <button type="button" class="toggle book" v-on:click="showMobileBook2()">蔡驍《无色的风暴》</button>
+              <button
+                type="button"
+                class="mobileToggle book"
+                v-on:click="showMobileBook1()"
+              >蔡驍《有颜色的风景》</button>
+              <button
+                type="button"
+                class="mobileToggle book"
+                v-on:click="showMobileBook2()"
+              >蔡驍《无色的风暴》</button>
             </div>
           </div>
           <div
@@ -71,24 +79,24 @@
           >←</div>
           <button
             type="button"
-            class="toggle about"
+            class="mobileToggle about"
             v-on:click="showMobileAboutCatalog(titleLoaded,bookMenuLoaded,aboutLoaded,aboutBack,aboutContentLoaded)"
             v-if="aboutLoaded"
           >关于</button>
         </div>
       </div>
       <div class="home_wrapper_top_right">
-        <router-link class="toggle english" to="/en">English</router-link>
+        <router-link class="mobileToggle english" to="/en">English</router-link>
       </div>
     </div>
     <div class="mobile_wrapper_bottom">
       <div v-if="aboutContentLoaded">
         <About></About>
       </div>
-      <div class="home_wrapper_left_col3" v-if="book1Loaded">
+      <div class="home_wrapper_left_col3 mobile_col3" v-if="book1Loaded">
         <Book1 />
       </div>
-      <div class="home_wrapper_left_col3" v-if="book2Loaded">
+      <div class="home_wrapper_left_col3 mobile_col3" v-if="book2Loaded">
         <Book2 />
       </div>
     </div>
@@ -267,7 +275,7 @@ export default {
     z-index: 2;
     max-height: calc(100vh - 4rem);
     .row1 {
-      margin-bottom: 0.4rem;
+      // margin-bottom: 0.4rem;
     }
     &_col1 {
       margin-right: 1.5rem;
@@ -289,13 +297,12 @@ export default {
     }
     &_col2 {
       margin-right: 1.5rem;
-      max-width: 200px;
-      height: min-content;
+      height: 100%;
       min-width: fit-content;
     }
     &_col3 {
       max-width: 720px;
-      height: 83vh;
+      height: 91vh;
       overflow-y: scroll;
       overflow-x: hidden;
       padding-right: 0.5rem;
@@ -309,17 +316,23 @@ export default {
     display: flex;
     text-align: left;
   }
+  .catalog_wrapper {
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
   .toggle {
     display: flex;
     flex-direction: column;
     text-align: left;
     font-size: 17px;
-    margin: 0.4rem 0 0.4rem 0;
+    margin: 0.1rem 0 0.1rem 0;
     align-items: flex-start;
   }
   .book {
     color: #e41722;
     flex-direction: row;
+    max-width: 350px;
   }
   .about {
     color: #008d45;
@@ -372,11 +385,19 @@ button {
     text-align: left;
   }
 }
-// .bookCatalogBack {
-//   font-size: larger;
-//   color: #e41722;
-// }
+
+.mobileToggle {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  font-size: 17px;
+  margin: 0.4rem 0 0.4rem 0;
+  align-items: flex-start;
+}
 .backBtn {
   font-size: larger;
+}
+.mobile_col3 {
+  height: 83vh;
 }
 </style>

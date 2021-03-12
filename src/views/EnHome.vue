@@ -1,6 +1,6 @@
 <template>
   <!-- 电脑端样式 -->
-  <div class="home_wrapper" v-if="screenWidth>500">
+  <div class="home_wrapper" v-if="screenWidth > 500">
     <div class="home_wrapper_left">
       <div class="home_wrapper_left_col1">
         <div class="title row1">Pressed Press</div>
@@ -9,24 +9,36 @@
             type="button"
             class="toggle book"
             v-on:click="showBookCatalog(bookCatalogLoaded)"
-          >Books</button>
+          >
+            Books
+          </button>
           <button
             type="button"
             class="toggle about"
             v-on:click="showAboutCatalog(aboutContentLoaded)"
-          >About</button>
+          >
+            About
+          </button>
         </div>
       </div>
       <div class="home_wrapper_left_col2" v-if="bookCatalogLoaded">
         <div class="row1">〇</div>
         <div class="catalog_wrapper toggle">
-          <button type="button" class="toggle book" v-on:click="showBook1(book1Loaded)">
+          <button
+            type="button"
+            class="toggle book"
+            v-on:click="showBook1(book1Loaded)"
+          >
             <span>
               CAI Xiao,
               <i>Landscapes With Color</i>
             </span>
           </button>
-          <button type="button" class="toggle book" v-on:click="showBook2(book2Loaded)">
+          <button
+            type="button"
+            class="toggle book"
+            v-on:click="showBook2(book2Loaded)"
+          >
             <span>
               CAI Xiao,
               <i>Invisible Storm</i>
@@ -34,7 +46,10 @@
           </button>
         </div>
       </div>
-      <div class="home_wrapper_left_col2 row3Content" v-else-if="aboutContentLoaded">
+      <div
+        class="home_wrapper_left_col2 row3Content"
+        v-else-if="aboutContentLoaded"
+      >
         <EnAbout />
       </div>
       <div class="home_wrapper_left_col3" v-if="book1Loaded">
@@ -49,37 +64,65 @@
     </div>
   </div>
   <!-- 手机端样式 -->
-  <div class="home_wrapper mobile_wrapper" v-else-if="screenWidth<500">
+  <div class="home_wrapper mobile_wrapper" v-else-if="screenWidth < 500">
     <div class="mobile_wrapper_top">
       <div class="mobile_wrapper_top_left">
         <div
           class="title row1"
-          :class="[ fadeout ? 'fadeout' : '' ]"
+          :class="[fadeout ? 'fadeout' : '']"
           v-if="titleLoaded"
-        >Pressed Press</div>
-        <div class="toggle">
+        >
+          Pressed Press
+        </div>
+        <div class="mobileToggle">
           <div
             type="button"
             class="book backBtn"
             v-if="bookCatalogBack"
-            v-on:click="showMobileBookCatalog(titleLoaded, aboutLoaded, bookCatalogLoaded,bookCatalogBack)"
-          >←</div>
+            v-on:click="
+              showMobileBookCatalog(
+                titleLoaded,
+                aboutLoaded,
+                bookCatalogLoaded,
+                bookCatalogBack
+              )
+            "
+          >
+            ←
+          </div>
           <button
             type="button"
-            class="toggle book"
+            class="mobileToggle book"
             v-if="bookMenuLoaded"
-            v-on:click="showMobileBookCatalog(titleLoaded, aboutLoaded, bookCatalogLoaded,bookCatalogBack)"
-          >Books</button>
+            v-on:click="
+              showMobileBookCatalog(
+                titleLoaded,
+                aboutLoaded,
+                bookCatalogLoaded,
+                bookCatalogBack
+              )
+            "
+          >
+            Books
+          </button>
           <div class="home_wrapper_left_col2" v-if="bookCatalogLoaded">
             <div class="row1">〇</div>
             <div class="catalog_wrapper book">
-              <button type="button" class="toggle book" v-on:click="showMobileBook1()">
+              <button
+                type="button"
+                class="mobileToggle book"
+                v-on:click="showMobileBook1()"
+              >
                 <span>
                   CAI Xiao,
                   <i>Landscapes With Color</i>
                 </span>
               </button>
-              <button type="button" class="toggle book" v-on:click="showMobileBook2()">
+              <button
+                type="button"
+                class="mobileToggle book"
+                v-on:click="showMobileBook2()"
+              >
                 <span>
                   CAI Xiao,
                   <i>Invisible Storm</i>
@@ -91,28 +134,48 @@
             type="button"
             class="about backBtn"
             v-if="aboutBack"
-            v-on:click="showMobileAboutCatalog(titleLoaded,bookMenuLoaded,aboutLoaded,aboutBack,aboutContentLoaded)"
-          >←</div>
+            v-on:click="
+              showMobileAboutCatalog(
+                titleLoaded,
+                bookMenuLoaded,
+                aboutLoaded,
+                aboutBack,
+                aboutContentLoaded
+              )
+            "
+          >
+            ←
+          </div>
           <button
             type="button"
-            class="toggle about"
-            v-on:click="showMobileAboutCatalog(titleLoaded,bookMenuLoaded,aboutLoaded,aboutBack,aboutContentLoaded)"
+            class="mobileToggle about"
+            v-on:click="
+              showMobileAboutCatalog(
+                titleLoaded,
+                bookMenuLoaded,
+                aboutLoaded,
+                aboutBack,
+                aboutContentLoaded
+              )
+            "
             v-if="aboutLoaded"
-          >About</button>
+          >
+            About
+          </button>
         </div>
       </div>
       <div class="home_wrapper_top_right">
-        <router-link class="toggle english" to="/">中文</router-link>
+        <router-link class="mobileToggle english" to="/">中文</router-link>
       </div>
     </div>
     <div class="mobile_wrapper_bottom">
       <div v-if="aboutContentLoaded">
         <EnAbout></EnAbout>
       </div>
-      <div class="home_wrapper_left_col3" v-if="book1Loaded">
+      <div class="home_wrapper_left_col3 mobile_col3" v-if="book1Loaded">
         <EnBook1 />
       </div>
-      <div class="home_wrapper_left_col3" v-if="book2Loaded">
+      <div class="home_wrapper_left_col3 mobile_col3" v-if="book2Loaded">
         <EnBook2 />
       </div>
     </div>
@@ -292,7 +355,7 @@ export default {
     z-index: 2;
     max-height: calc(100vh - 4rem);
     .row1 {
-      margin-bottom: 0.4rem;
+      // margin-bottom: 0.4rem;
     }
     &_col1 {
       margin-right: 1.5rem;
@@ -315,13 +378,12 @@ export default {
     }
     &_col2 {
       margin-right: 1.5rem;
-      max-width: 200px;
-      height: min-content;
+      height: 100%;
       min-width: fit-content;
     }
     &_col3 {
       max-width: 720px;
-      height: 83vh;
+      height: 91vh;
       overflow-y: scroll;
       overflow-x: hidden;
       padding-right: 0.5rem;
@@ -335,17 +397,23 @@ export default {
     display: flex;
     text-align: left;
   }
+  .catalog_wrapper {
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
   .toggle {
     display: flex;
     flex-direction: column;
     text-align: left;
     font-size: 17px;
-    margin: 0.4rem 0 0.4rem 0;
+    margin: 0.1rem 0 0.1rem 0;
     align-items: flex-start;
   }
   .book {
     color: #e41722;
     flex-direction: row;
+    max-width: 350px;
   }
   .about {
     color: #008d45;
@@ -399,11 +467,19 @@ button {
     text-align: left;
   }
 }
-// .bookCatalogBack {
-//   font-size: larger;
-//   color: #e41722;
-// }
+
+.mobileToggle {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  font-size: 17px;
+  margin: 0.4rem 0 0.4rem 0;
+  align-items: flex-start;
+}
 .backBtn {
   font-size: larger;
+}
+.mobile_col3 {
+  height: 83vh;
 }
 </style>
