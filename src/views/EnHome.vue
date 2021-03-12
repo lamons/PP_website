@@ -58,12 +58,12 @@
           v-if="titleLoaded"
         >Pressed Press</div>
         <div class="toggle">
-          <button
+          <div
             type="button"
             class="book backBtn"
             v-if="bookCatalogBack"
             v-on:click="showMobileBookCatalog(titleLoaded, aboutLoaded, bookCatalogLoaded,bookCatalogBack)"
-          >←</button>
+          >←</div>
           <button
             type="button"
             class="toggle book"
@@ -87,12 +87,12 @@
               </button>
             </div>
           </div>
-          <button
+          <div
             type="button"
             class="about backBtn"
             v-if="aboutBack"
             v-on:click="showMobileAboutCatalog(titleLoaded,bookMenuLoaded,aboutLoaded,aboutBack,aboutContentLoaded)"
-          >←</button>
+          >←</div>
           <button
             type="button"
             class="toggle about"
@@ -202,7 +202,7 @@ export default {
       bookCatalogBack
     ) {
       //关掉标题
-      this.fadeout = true;
+      // this.fadeout = true;
       this.titleLoaded = !titleLoaded;
 
       //关掉关于
@@ -253,7 +253,6 @@ export default {
       aboutContentLoaded
     ) {
       //关掉标题
-      this.fadeout = true;
       this.titleLoaded = !titleLoaded;
       //关掉出版物
       this.bookMenuLoaded = !bookMenuLoaded;
@@ -285,7 +284,7 @@ export default {
   font-size: 17px;
   display: flex;
   justify-content: space-between;
-  padding: 2rem;
+  padding: 2rem 2rem 0 2rem;
   &_left {
     display: flex;
     // flex-wrap: wrap;
@@ -319,7 +318,7 @@ export default {
     }
     &_col3 {
       max-width: 720px;
-      height: 90vh;
+      height: 81vh;
       overflow-y: scroll;
       overflow-x: hidden;
       padding-right: 0.5rem;
@@ -385,6 +384,8 @@ button {
 //手机端样式
 .mobile_wrapper {
   flex-direction: column;
+  padding: 1rem 1rem 0 1rem;
+
   &_top {
     display: flex;
     justify-content: space-between;
