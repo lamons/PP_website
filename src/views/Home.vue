@@ -248,6 +248,9 @@ export default {
       this.titleLoaded = !titleLoaded;
       //关掉出版物
       this.bookMenuLoaded = !bookMenuLoaded;
+      //关掉所有文章
+      this.book1Loaded = false;
+      this.book2Loaded = false;
       //打开或关闭当前目录
       this.aboutBack = !aboutBack;
       this.aboutContentLoaded = !aboutContentLoaded;
@@ -355,7 +358,8 @@ export default {
 }
 
 .row3Content {
-  margin-top: 4.6rem;
+  margin-top: 3.4rem;
+  max-width: 425px;
 }
 button {
   border: 0;
@@ -387,6 +391,7 @@ button {
 .mobile_wrapper {
   flex-direction: column;
   padding: 1rem 1rem 0 1rem;
+  justify-content: flex-start;
   &_top {
     display: flex;
     justify-content: space-between;
