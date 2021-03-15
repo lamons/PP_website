@@ -402,8 +402,9 @@ export default {
 }
 
 .row3Content {
-  margin-top: 3.4rem;
+  margin-top: 3rem;
   max-width: 425px;
+  max-height: 80vh;
 }
 button {
   border: 0;
