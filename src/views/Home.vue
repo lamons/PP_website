@@ -296,19 +296,6 @@ export default {
       margin-right: 1.5rem;
       height: min-content;
       min-width: fit-content;
-      animation-duration: 2s;
-      animation-name: slidein;
-    }
-    @keyframes slidein {
-      from {
-        margin-left: 100%;
-        width: 300%;
-      }
-
-      to {
-        margin-left: 0%;
-        width: 100%;
-      }
     }
     &_col2 {
       margin-right: 1.5rem;
