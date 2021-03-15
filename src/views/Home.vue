@@ -111,6 +111,15 @@ import Book2 from "@/components/Books/Book2.vue";
 export default {
   name: "Home",
   components: { About, Book1, Book2 },
+  beforeCreate() {
+    document
+      .querySelector("body")
+      .setAttribute("style", "overscroll-behavior: none");
+  },
+
+  beforeDestroy() {
+    document.querySelector("body").removeAttribute("style");
+  },
   mounted() {
     const that = this;
     window.onresize = () => {
@@ -268,12 +277,15 @@ export default {
   display: flex;
   justify-content: space-between;
   padding: 2rem 2rem 0 2rem;
+  position: absolute;
+  width: -webkit-fill-available;
+  height: calc(100vh - 4rem);
   &_left {
     display: flex;
     // flex-wrap: wrap;
     text-align: left;
     z-index: 2;
-    max-height: calc(100vh - 4rem);
+    // max-height: calc(100vh - 4rem);
     .row1 {
       // margin-bottom: 0.4rem;
     }
@@ -302,7 +314,7 @@ export default {
     }
     &_col3 {
       max-width: 720px;
-      height: 91vh;
+      height: 93vh;
       overflow-y: scroll;
       overflow-x: hidden;
       padding-right: 0.5rem;

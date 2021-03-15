@@ -9,36 +9,24 @@
             type="button"
             class="toggle book"
             v-on:click="showBookCatalog(bookCatalogLoaded)"
-          >
-            Books
-          </button>
+          >Books</button>
           <button
             type="button"
             class="toggle about"
             v-on:click="showAboutCatalog(aboutContentLoaded)"
-          >
-            About
-          </button>
+          >About</button>
         </div>
       </div>
       <div class="home_wrapper_left_col2" v-if="bookCatalogLoaded">
         <div class="row1">〇</div>
         <div class="catalog_wrapper toggle">
-          <button
-            type="button"
-            class="toggle book"
-            v-on:click="showBook1(book1Loaded)"
-          >
+          <button type="button" class="toggle book" v-on:click="showBook1(book1Loaded)">
             <span>
               CAI Xiao,
               <i>Landscapes With Color</i>
             </span>
           </button>
-          <button
-            type="button"
-            class="toggle book"
-            v-on:click="showBook2(book2Loaded)"
-          >
+          <button type="button" class="toggle book" v-on:click="showBook2(book2Loaded)">
             <span>
               CAI Xiao,
               <i>Invisible Storm</i>
@@ -46,10 +34,7 @@
           </button>
         </div>
       </div>
-      <div
-        class="home_wrapper_left_col2 row3Content"
-        v-else-if="aboutContentLoaded"
-      >
+      <div class="home_wrapper_left_col2 row3Content" v-else-if="aboutContentLoaded">
         <EnAbout />
       </div>
       <div class="home_wrapper_left_col3" v-if="book1Loaded">
@@ -67,13 +52,7 @@
   <div class="home_wrapper mobile_wrapper" v-else-if="screenWidth < 500">
     <div class="mobile_wrapper_top">
       <div class="mobile_wrapper_top_left">
-        <div
-          class="title row1"
-          :class="[fadeout ? 'fadeout' : '']"
-          v-if="titleLoaded"
-        >
-          Pressed Press
-        </div>
+        <div class="title row1" :class="[fadeout ? 'fadeout' : '']" v-if="titleLoaded">Pressed Press</div>
         <div class="mobileToggle">
           <div
             type="button"
@@ -87,9 +66,7 @@
                 bookCatalogBack
               )
             "
-          >
-            ←
-          </div>
+          >←</div>
           <button
             type="button"
             class="mobileToggle book"
@@ -102,27 +79,17 @@
                 bookCatalogBack
               )
             "
-          >
-            Books
-          </button>
+          >Books</button>
           <div class="home_wrapper_left_col2" v-if="bookCatalogLoaded">
             <div class="row1">〇</div>
             <div class="catalog_wrapper book">
-              <button
-                type="button"
-                class="mobileToggle book"
-                v-on:click="showMobileBook1()"
-              >
+              <button type="button" class="mobileToggle book" v-on:click="showMobileBook1()">
                 <span>
                   CAI Xiao,
                   <i>Landscapes With Color</i>
                 </span>
               </button>
-              <button
-                type="button"
-                class="mobileToggle book"
-                v-on:click="showMobileBook2()"
-              >
+              <button type="button" class="mobileToggle book" v-on:click="showMobileBook2()">
                 <span>
                   CAI Xiao,
                   <i>Invisible Storm</i>
@@ -143,9 +110,7 @@
                 aboutContentLoaded
               )
             "
-          >
-            ←
-          </div>
+          >←</div>
           <button
             type="button"
             class="mobileToggle about"
@@ -159,9 +124,7 @@
               )
             "
             v-if="aboutLoaded"
-          >
-            About
-          </button>
+          >About</button>
         </div>
       </div>
       <div class="home_wrapper_top_right">
@@ -190,6 +153,15 @@ import EnBook2 from "@/components/Books/EnBook2.vue";
 export default {
   name: "EnHome",
   components: { EnAbout, EnBook1, EnBook2 },
+  beforeCreate() {
+    document
+      .querySelector("body")
+      .setAttribute("style", "overscroll-behavior: none");
+  },
+
+  beforeDestroy() {
+    document.querySelector("body").removeAttribute("style");
+  },
   mounted() {
     const that = this;
     window.onresize = () => {
@@ -348,12 +320,15 @@ export default {
   display: flex;
   justify-content: space-between;
   padding: 2rem 2rem 0 2rem;
+  position: absolute;
+  width: -webkit-fill-available;
+  height: calc(100vh - 4rem);
   &_left {
     display: flex;
     // flex-wrap: wrap;
     text-align: left;
     z-index: 2;
-    max-height: calc(100vh - 4rem);
+    // max-height: calc(100vh - 4rem);
     .row1 {
       // margin-bottom: 0.4rem;
     }
@@ -383,7 +358,7 @@ export default {
     }
     &_col3 {
       max-width: 720px;
-      height: 91vh;
+      height: 93vh;
       overflow-y: scroll;
       overflow-x: hidden;
       padding-right: 0.5rem;

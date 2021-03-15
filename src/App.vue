@@ -29,7 +29,6 @@ export default {
   text-align: center;
   /* color: #2c3e50; */
   background-color: #a9aaaa;
-  min-height: 102vh;
   width: 100%;
   z-index: 0;
 }

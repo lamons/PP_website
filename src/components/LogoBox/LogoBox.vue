@@ -87,7 +87,7 @@ export default {
 <style lang="scss" scoped>
 .logoBox {
   z-index: 1;
-  position: absolute;
+  position: relative;
   top: 0;
   height: 100vh;
   width: 100%;
