@@ -237,7 +237,6 @@ export default {
       bookCatalogBack
     ) {
       //关掉标题
-      // this.fadeout = true;
       this.titleLoaded = !titleLoaded;
 
       //关掉关于
@@ -377,6 +376,9 @@ export default {
     margin: 0.1rem 0 0.1rem 0;
     align-items: flex-start;
   }
+  .catalog_wrapper.toggle {
+    padding-right: 5px;
+  }
   .book {
     color: #e41722;
     flex-direction: row;
@@ -409,7 +411,7 @@ button {
 }
 
 .fadeout {
-  animation-duration: 2s;
+  animation-duration: 1s;
   animation-name: fadeout;
 }
 @keyframes fadeout {
