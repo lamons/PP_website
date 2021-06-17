@@ -283,6 +283,7 @@ export default {
   position: absolute;
   width: -webkit-fill-available;
   height: calc(100vh - 4rem);
+  width: -moz-available;
   &_left {
     display: flex;
     // flex-wrap: wrap;
@@ -297,6 +298,7 @@ export default {
       height: min-content;
       min-width: fit-content;
     }
+
     &_col2 {
       margin-right: 1.5rem;
       height: 100%;
@@ -308,6 +310,21 @@ export default {
       overflow-y: scroll;
       overflow-x: hidden;
       padding-right: 0.5rem;
+      animation-duration: 2s;
+      animation-name: slidein;
+    }
+    @keyframes slidein {
+      from {
+        opacity: 0;
+        // -webkit-transform: translate(-170px, 0);
+        // transform: translate(-1000px, 0);
+      }
+
+      to {
+        opacity: 1;
+        // -webkit-transform: translate(0px, 0);
+        // transform: translate(0px, 0);
+      }
     }
   }
   &_right {

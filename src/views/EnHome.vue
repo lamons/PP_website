@@ -326,6 +326,8 @@ export default {
   position: absolute;
   width: -webkit-fill-available;
   height: calc(100vh - 4rem);
+  width: -moz-available;
+
   &_left {
     display: flex;
     // flex-wrap: wrap;
