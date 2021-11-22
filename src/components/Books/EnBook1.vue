@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img src="@/imgs/cxc.jpg" style="width:100%;" /><br />
+    <img src="@/imgs/pp01.png" style="width:100%;" /><br />
     This book is intended to be a physical copy of CAI Xiao's photography series
     <i>Landscapes With Color</i>, made under the principle of “keeping the cost
     as low as possible”, while its origin exists as
@@ -32,7 +32,7 @@
       out, on back order)
     </p>
     <br />
-    Contact:<br />
+    Contact of author:<br />
     Weibo: <a href="https://weibo.com/516653086">@蔡驍</a><br />
     Email: <a href="mailto:kxxhmr@gmail.com">kxxhmr@gmail.com</a><br />
     Instagram: <a href="https://instagram.com/s_aigyou">s_aigyou</a><br /><br />
@@ -46,6 +46,7 @@
     Binded by MAX paper clipper<br />
     First printed on 4th January, 2020
     <p></p>
+    <img src="@/imgs/cxc.jpg" style="width:100%;" /><br />
     <img
       src="https://cdn.jsdelivr.net/gh/lamons/PP_website@baebcf4/imgs/cxpreview.gif"
       style="width:100%;"

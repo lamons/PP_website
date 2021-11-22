@@ -28,8 +28,8 @@
           </button>
           <button type="button" class="toggle book" v-on:click="showBook2(book2Loaded)">
             <span>
-              CAI Xiao,
-              <i>Invisible Storm</i>
+              chimaybe, CAI Xiao, furfur,<br />
+              <i>Three Zines for Яów</i>
             </span>
           </button>
         </div>
@@ -91,8 +91,8 @@
               </button>
               <button type="button" class="mobileToggle book" v-on:click="showMobileBook2()">
                 <span>
-                  CAI Xiao,
-                  <i>Invisible Storm</i>
+                  chimaybe, CAI Xiao, furfur,<br />
+              <i>Three Zines for Яów</i>
                 </span>
               </button>
             </div>

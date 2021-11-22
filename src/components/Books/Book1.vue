@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img src="@/imgs/cxc.jpg" style="width:100%;" /><br />
+    <img src="@/imgs/pp01.png" style="width:100%;" /><br />
     这本画册最初是作为蔡驍《有颜色的风景》系列彩色照片的<a
       href="https://cxcxcx.cx"
       >数字原稿</a
@@ -36,6 +36,7 @@
     MAX 推夹器装订<br />
     2020 年 1 月 4 日第一次印刷
     <p></p>
+    <img src="@/imgs/cxc.jpg" style="width:100%;" /><br />
     <img
       src="https://cdn.jsdelivr.net/gh/lamons/PP_website@baebcf4/imgs/cxpreview.gif"
       style="width:100%;"
