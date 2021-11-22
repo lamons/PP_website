@@ -21,7 +21,7 @@
         <div class="row1">〇</div>
         <div class="catalog_wrapper toggle">
           <button type="button" class="toggle book" v-on:click="showBook1(book1Loaded)">蔡驍《有颜色的风景》</button>
-          <button type="button" class="toggle book" v-on:click="showBook2(book2Loaded)">蔡驍、毛利牙、Chimaybe<br />《为 Яów 所制作的三本册子》</button>
+          <button type="button" class="toggle book" v-on:click="showBook2(book2Loaded)">chimaybe、蔡驍、毛利牙<br />《为 Яów 所制作的三本册子》</button>
         </div>
       </div>
       <div class="home_wrapper_left_col2 row3Content" v-else-if="aboutContentLoaded">
@@ -68,7 +68,7 @@
                 type="button"
                 class="mobileToggle book"
                 v-on:click="showMobileBook2()"
-              >蔡驍、毛利牙、Chimaybe<br />《为 Яów 所制作的三本册子》</button>
+              >chimaybe、蔡驍、毛利牙<br />《为 Яów 所制作的三本册子》</button>
             </div>
           </div>
           <div
