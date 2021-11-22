@@ -23,7 +23,7 @@
       购买：<a href="https://k.ruyu.com/ZPsbLGQ8">微店</a>（第一批售罄，可预订）
     </p>
     <br />
-    联系方式：<br />
+    作者联系方式：<br />
     微博：<a href="https://weibo.com/516653086">@蔡驍</a><br />
     邮箱：<a href="mailto:kxxhmr@gmail.com">kxxhmr@gmail.com</a><br />
     Instagram：<a href="https://instagram.com/s_aigyou">s_aigyou</a><br /><br />
