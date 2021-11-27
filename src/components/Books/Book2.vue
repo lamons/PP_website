@@ -30,7 +30,7 @@
     MAX 推夹器装订<br />
     2020 年 5 月第一次印刷
     <p></p>
-	<video width="100%" controls>
+	<video width="100%" controls poster="@/imgs/book2/3zinesvlog-0001.jpeg">
 	<source src="http://dpv.videocc.net/3c94696c86/9/3c94696c86f49b4b04a8733d0307d8b9_2.mp4" type="video/mp4">
 	Your browser does not support the video tag.
 	</video>
