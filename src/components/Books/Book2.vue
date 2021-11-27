@@ -31,7 +31,7 @@
     2020 年 5 月第一次印刷
     <p></p>
 	<video width="100%" controls>
-	<source src="@/imgs/book2/3zinesvlog.mp4" type="video/mp4">
+	<source src="http://dpv.videocc.net/3c94696c86/9/3c94696c86f49b4b04a8733d0307d8b9_2.mp4" type="video/mp4">
 	Your browser does not support the video tag.
 	</video>
 	↑ 作者毛利牙在她的「明发拼图摄影展」中展示张贴了本作品。

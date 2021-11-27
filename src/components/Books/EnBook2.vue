@@ -33,7 +33,7 @@
     First printed on May, 2020
     <p></p>
 	<video width="100%" controls>
-	<source src="@/imgs/book2/3zinesvlog.mp4" type="video/mp4">
+	<source src="http://dpv.videocc.net/3c94696c86/9/3c94696c86f49b4b04a8733d0307d8b9_2.mp4" type="video/mp4">
 	Your browser does not support the video tag.
 	</video>
 	↑ furfur exhibited this zine series in her project <i>Mingfa jigsaw</i>.
