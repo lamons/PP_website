@@ -32,6 +32,11 @@
 	Binded by MAX paper clipper<br />
     First printed on May, 2020
     <p></p>
+	<video width="100%" controls>
+	<source src="@/imgs/book2/3zinesvlog.mp4" type="video/mp4">
+	Your browser does not support the video tag.
+	</video>
+	↑ furfur exhibited this zine series in her project <i>Mingfa jigsaw</i>.
     <img src="@/imgs/book2/chimaybe.jpg" style="width:100%;" /><br />
     <img src="@/imgs/book2/cx.jpg" style="width:100%;" /><br />
     <img src="@/imgs/book2/mao.jpg" style="width:100%;" /><br />

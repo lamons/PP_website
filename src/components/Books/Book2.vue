@@ -24,12 +24,17 @@
 
     ----------<br />
 
-    31 (C)/35 (毛)/27 (蔡) 页<br />
+    31 (c)/35 (毛)/27 (蔡) 页<br />
     好顺 Horizon 80g 多功能复印纸、硫酸纸<br />
     手写签名、封面，内页复印机印刷<br />
     MAX 推夹器装订<br />
     2020 年 5 月第一次印刷
     <p></p>
+	<video width="100%" controls>
+	<source src="@/imgs/book2/3zinesvlog.mp4" type="video/mp4">
+	Your browser does not support the video tag.
+	</video>
+	↑ 作者毛利牙在她的「明发拼图摄影展」中展示张贴了本作品。
     <img src="@/imgs/book2/chimaybe.jpg" style="width:100%;" /><br />
     <img src="@/imgs/book2/cx.jpg" style="width:100%;" /><br />
     <img src="@/imgs/book2/mao.jpg" style="width:100%;" /><br />

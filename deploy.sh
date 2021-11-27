@@ -10,7 +10,7 @@ npm run build
 cd docs
 
 # 部署到自定義網域
-echo 'pressed.press' > CNAME
+# echo 'pressed.press' > CNAME
 
 cd ..
 
