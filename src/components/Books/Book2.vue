@@ -3,7 +3,7 @@
     <img src="@/imgs/book2/main.jpg" style="width:100%;" /><br />
 	本项目为受酒吧 Яów 委托制作，在实地售卖的总共三册的 zine 套装。在制作工艺上，采取了和蔡驍《有颜色的风景》相同的印刷和装帧。三册 zine 分别为：<br /><br />
 	chimaybe《離得越緊她越是害怕》<br />
-	蔡驍《蔡驍》<br />
+	蔡驍《颜色奇怪的风景》<br />
 	毛利牙《径》<br />
     <br />
     <p class="purchase">
