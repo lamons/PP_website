@@ -301,7 +301,6 @@ export default {
 
     &_col2 {
       margin-right: 1.5rem;
-      height: 100%;
       min-width: fit-content;
     }
     &_col3 {
